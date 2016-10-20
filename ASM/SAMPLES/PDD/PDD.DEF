@@ -1,0 +1,19 @@
+;***************************************************************************
+;*
+;*                      Physical Device Driver Sample
+;*                 Copyright (c) IBM Corporation   1992
+;*                           All Rights Reserved
+;*
+;***************************************************************************
+PHYSICAL DEVICE
+CODE    PRELOAD
+DATA    PRELOAD
+SEGMENTS
+   DSEG    CLASS 'DATA'
+   CSEG    CLASS 'CODE'
+
+;
+;pdd uses no stack but
+;it keeps the linker from complaining
+;
+STACKSIZE   2048

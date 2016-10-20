@@ -1,0 +1,10 @@
+;-------------------------------------
+; CONSTR.DEF module definition file
+;-------------------------------------
+
+NAME           CONSTR  NOTWINDOWCOMPAT
+
+DESCRIPTION    '(c) IBM Corp.'
+PROTMODE
+HEAPSIZE       2048
+STACKSIZE      8192

@@ -1,0 +1,37 @@
+width 66
+height 16
+columns 2
+[[header]]
+Romeo and Juliet		  Page: [[page_number]]
+[[end_environment]]
+[[footer]]
+Juliet's Lament
+[[end_environment]]
+[[indent_paragraphs]]
+'Tis but thy name that is my enemy.
+Thou art thyself, though not a Montague.
+What's Montague?  It is
+[[bulleted_list]]
+nor hand,
+
+nor foot,
+
+nor arm,
+
+nor face,
+
+nor any other part belonging to a man.
+[[end_environment]]
+O, be some other name!
+What's in a name?  That which we call a rose
+by any other name would smell as sweet.
+
+So Romeo would, were he not Romeo call'd,
+retain that dear perfection which he owes
+without that title.
+
+Romeo, doff thy name;
+And for that name, which is no part of thee,
+take all myself.
+[[end_environment]]
+

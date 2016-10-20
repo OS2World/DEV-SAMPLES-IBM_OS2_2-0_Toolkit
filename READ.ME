@@ -1,0 +1,148 @@
+
+
+ ******************************************************************************
+ *                 IBM Multimedia Presentation Manager/2                      *
+ *                 IBM Multimedia Presentation Manager Toolkit /2             *
+ *                                Version 1.00                                *
+ *           (C) Copyright IBM Corp. 1991, 1992  All Rights Reserved          *
+ *                    IBM is a registered trademark of the                    *
+ *                International Business Machines Corporation                 *
+ *  U.S. Government Users Restricted Rights - Use, duplication or disclosure  *
+ *           restricted by GSA ADP Schedule Contract with IBM Corp.           *
+ ******************************************************************************
+
+   Thank you for choosing Multimedia Presentation Manager/2.  This README
+   document contains useful information that will be helpful in certain
+   circumstances.
+
+   1.  This CD has three directories from which an installation can be run.
+       Running the installation (by typing "minstall" at the OS/2 Window
+       command prompt) from different directories will install a
+       different system.
+
+       Here's a description of each system that can be installed,
+       and how to install it.
+
+       - MMPM/2 ONLY:
+
+         To install MMPM/2 only, change the directory on the CD to the MMPM2
+         directory.  An installation run from this directory will install only
+         the base English version of the MMPM/2 system.
+
+       - Toolkit ONLY:
+
+         To install the Toolkit only, change the directory on the CD to the
+         MMPMTLK2 directory.  An installation run from this directory
+         will install only the Toolkit.  This will not run if MMPM/2 has
+         not been previously installed on the system.
+
+         NOTE:  This is the method of installation you should use if you
+         use a non-English version of MMPM/2, and wish to install the
+         Toolkit only.
+
+       - Both MMPM/2 and Toolkit:
+
+         To install both MMPM/2 and the Toolkit, install from the root
+         directory of the CD.   An installation run from here will install
+         both the English version of MMPM/2 and the Toolkit at the same time.
+
+         If you have previously installed MMPM/2, this will replace it.
+         Even if the version of MMPM/2 that you had previously installed
+         was a non-English version, it will be replaced with the English
+         version.
+
+   2.  If you have a pre-released version of MMPM/2, it is recommended that
+       you delete that version before installing this product.
+
+       This includes deleting all files and directories that are under the
+       MMOS2 directory.  Before doing this, however, you may want to save
+       any user data that you might have placed in any of these directories.
+
+       This also includes deleting the Multimedia Presentation Manager/2
+       folder from the OS/2 desktop, deleting the Multimedia Presentation
+       Manager Toolkit/2 folder from the OS/2 desktop, deleting the Volume
+       Control object from the OS/2 desktop, and deleting the MIDI and
+       Digital Audio templates from the Templates folder.
+
+       Also, you should delete any objects that you have dragged from
+       either the Multimedia Presentation Manager/2 folder or the
+       Multimedia Presentation Manager Toolkit/2 folder out to the
+       OS/2 desktop.
+
+   3.  I/O Procedure DLLs to support the following image file formats are
+       provided by the MMPM/2 system, but are not currently used by any
+       of the MMPM/2 Media Drivers:
+
+       AVC Image
+       OS/2 1.3 Bitmap
+       M-Motion Image
+
+       If developing a media driver or application which requires support
+       for these image types, add the following text to your installation
+       control file:
+
+       mmioInstall =
+          (
+          mmioFourCC        = "OS13"
+          mmioDllName       = "$(DEST)OS13PROC.DLL"
+          mmioDllEntryPoint = "IOProc_Entry"
+          )
+
+       mmioInstall =
+          (
+          mmioFourCC        = "AVCI"
+          mmioDllName       = "$(DEST)AVCIIOPR.DLL"
+          mmioDllEntryPoint = "IOProc_Entry"
+          )
+
+       mmioInstall =
+          (
+          mmioFourCC        = "MMOT"
+          mmioDllName       = "$(DEST)MMOTPROC.DLL"
+          mmioDllEntryPoint = "IOProc_Entry"
+          )
+
+       Optionally, this support can be programatically installed using
+       the mmioInstallIOProc api or the mmioIniFileHandler api.  Please
+       refer to the MMPM/2 Programmer's Reference for more details on these
+       apis.
+
+   4.  The M-Audio Media Control Driver of MMPM/2 provides support for
+       the following types of audio files:
+
+       - Standard RIFF Wave audio files with sampling rates of
+         11.025 kHz, 22.050 kHz, or 44.100 kHz
+       - AVC Audio Files
+
+       Other file formats will be supported as additional media drivers
+       become available.
+
+   5.  MMPM/2 provides videodisc support for Pioneer laserdisc models
+       LD-V4200, LD-V4300D, LD-V4400, and LD-V8000.
+
+   6.  MMPM/2 supports the following baud rates for videodiscs:
+       4800, 9600.
+
+       Please ensure that the default settings on your videodisc hardware
+       match the settings on the Videodisc page of the Multimedia Setup
+       applet in the Multimedia Presentation Manager/2 folder.
+
+   7.  The MIDI and Digital Audio templates will be added to the OS/2
+       Templates folder when you run one of the MMPM/2 Media Players such
+       as the Digital Audio Player (found in the Multimedia Presentation
+       Manager/2 folder on the OS/2 desktop).
+
+   8.  In the \MMOS2\MMTOOLKT\SAMPLES\DUET1 directory, you will find 20
+       bitmaps.  These graphical images can be placed on application
+       push buttons that you use for device or media control.  The bitmaps
+       represent commonly used functions, such as play, stop, mute, and
+       rewind.
+
+   9.  The Duet Player 2 sample program requires a CD-DA (CD Digital Audio)
+       disk to play music as part of a group.
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+;-------------------------------------
+; SETPRINT.DEF module definition file
+;-------------------------------------
+
+NAME           SETPRINT  NOTWINDOWCOMPAT
+
+DESCRIPTION    '(c) IBM Corp.'
+PROTMODE
+HEAPSIZE       4096
+STACKSIZE     10240

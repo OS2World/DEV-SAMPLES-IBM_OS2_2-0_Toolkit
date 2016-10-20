@@ -1,0 +1,10 @@
+;-------------------------------------
+; SHAPE.DEF module definition file
+;-------------------------------------
+
+NAME           SHAPE  NOTWINDOWCOMPAT
+
+DESCRIPTION    '(c) IBM Corp.'
+PROTMODE
+HEAPSIZE       2048
+STACKSIZE      8192

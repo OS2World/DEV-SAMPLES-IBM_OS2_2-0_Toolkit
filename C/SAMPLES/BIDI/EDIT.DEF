@@ -1,0 +1,10 @@
+;-------------------------------------
+; EDIT.DEF module definition file
+;-------------------------------------
+
+NAME           EDIT  NOTWINDOWCOMPAT
+
+DESCRIPTION    '(c) IBM Corp.'
+PROTMODE
+HEAPSIZE       2048
+STACKSIZE      8192
